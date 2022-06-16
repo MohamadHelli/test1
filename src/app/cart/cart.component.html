@@ -1,0 +1,10 @@
+<h2>Cart</h2>
+
+<div *ngFor=" let productcart of cartx">
+    <p> {{ productcart.name }} </p>
+    <p> {{ productcart.price }} </p>
+</div>
+<div>
+    <span>Total: {{total | currency: 'EUR'}}</span><br><br>
+    <span *ngIf="total > 5">Total including 10% discount: {{ total * 0.9 | currency: 'EUR' }}</span><br><br>
+</div>
